@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.homepage.HomePageFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_view_home_page_text_size_18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Понедельник, 21.05.2021" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_view_address_text_size_18sp"
+        app:layout_constraintStart_toStartOf="@id/textViewData"
+        app:layout_constraintTop_toBottomOf="@id/textViewData"
+        tools:text="г. Киев, Украина" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCoordinates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_view_coordinates_text_size_18sp"
+        app:layout_constraintStart_toStartOf="@id/textViewAddress"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddress"
+        tools:text="50.42927, 30.54076" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_temperature_text_size_100sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewCoordinates"
+        tools:text="+21" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewWeatherType"
+        android:layout_width="@dimen/simple_drawee_view_weather_type_size_150dp"
+        android:layout_height="@dimen/simple_drawee_view_weather_type_size_150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTemperature"
+        app:placeholderImageScaleType="fitXY"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_view_humidity_text_size_18sp"
+        app:layout_constraintStart_toStartOf="@id/textViewAddress"
+        app:layout_constraintTop_toBottomOf="@id/simpleDraweeViewWeatherType"
+        tools:text="Влажность: 50%" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewWindSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_view_wind_speed_text_size_18sp"
+        app:layout_constraintStart_toStartOf="@id/textViewAddress"
+        app:layout_constraintTop_toBottomOf="@id/textViewHumidity"
+        tools:text="Скорость ветра: 7 м/с" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_view_time_text_size_100sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewWindSpeed"
+        tools:text="12:42" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewCitiesWeather"
+        style="@style/TransitionButtons"
+        app:layout_constraintBottom_toBottomOf="@id/simpleDraweeViewHomePage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/simpleDraweeViewHomePage"
+        app:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_content_paste" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewHomePage"
+        style="@style/TransitionButtons"
+        android:layout_marginVertical="@dimen/common_button_margin_vertical_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/simpleDraweeViewSettings"
+        app:layout_constraintStart_toEndOf="@id/simpleDraweeViewCitiesWeather"
+        app:layout_constraintTop_toBottomOf="@id/textViewTime"
+        app:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_house_selected" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewSettings"
+        style="@style/TransitionButtons"
+        app:layout_constraintBottom_toBottomOf="@id/simpleDraweeViewHomePage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/simpleDraweeViewHomePage"
+        app:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_tune" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

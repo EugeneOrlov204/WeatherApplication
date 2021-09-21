@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutCitiesWeather"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.citiesweather.CitiesWeatherFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/swipe_refresh_layout_margin_bottom_50dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAddLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCitiesWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAddLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_button_margin_30dp"
+        android:background="@drawable/add_location_button"
+        android:stateListAnimator="@null"
+        android:text="@string/add_location"
+        app:layout_constraintBottom_toTopOf="@id/textViewSwipeItemToRemove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSwipeItemToRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/swipe_item_to_remove"
+        app:layout_constraintEnd_toEndOf="@id/buttonAddLocation"
+        app:layout_constraintStart_toStartOf="@id/buttonAddLocation"
+        app:layout_constraintTop_toBottomOf="@id/buttonAddLocation" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/contentLoadingProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewCitiesWeather"
+        style="@style/TransitionButtons"
+        app:layout_constraintBottom_toBottomOf="@id/simpleDraweeViewHomePage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/simpleDraweeViewHomePage"
+        app:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_content_paste_selected" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewHomePage"
+        style="@style/TransitionButtons"
+        android:layout_marginVertical="@dimen/common_button_margin_vertical_30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/simpleDraweeViewSettings"
+        app:layout_constraintStart_toEndOf="@id/simpleDraweeViewCitiesWeather"
+        app:layout_constraintTop_toBottomOf="@id/textViewSwipeItemToRemove"
+        app:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_house" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewSettings"
+        style="@style/TransitionButtons"
+        app:layout_constraintBottom_toBottomOf="@id/simpleDraweeViewHomePage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/simpleDraweeViewHomePage"
+        app:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/ic_tune" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

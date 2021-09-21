@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/citiesWeatherFragment">
+    <fragment
+        android:id="@+id/citiesWeatherFragment"
+        android:name="com.eorlov.weatherapplication.ui.citiesweather.CitiesWeatherFragment"
+        android:label="fragment_cities_weather"
+        tools:layout="@layout/fragment_cities_weather" >
+        <action
+            android:id="@+id/action_citiesWeatherFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+        <action
+            android:id="@+id/action_citiesWeatherFragment_to_addLocationFragment"
+            app:destination="@id/addLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.eorlov.weatherapplication.ui.homepage.HomePageFragment"
+        android:label="HomePageFragment" />
+    <fragment
+        android:id="@+id/addLocationFragment"
+        android:name="com.eorlov.weatherapplication.ui.addlocation.AddLocationFragment"
+        android:label="fragment_add_location"
+        tools:layout="@layout/fragment_add_location" />
+</navigation>

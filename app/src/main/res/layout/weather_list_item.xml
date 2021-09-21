@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weather_list_item_height_150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/city_weather"
+    android:layout_marginTop="@dimen/container_margin_top_10dp"
+    android:layout_marginStart="@dimen/container_margin_start_10dp"
+    android:layout_marginEnd="@dimen/container_margin_end_10dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_view_city_name_margin_20dp"
+        android:textSize="@dimen/text_view_city_name_text_size_20sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Odessa" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/simpleDraweeViewWeather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/text_view_temperature_margin_end_5dp"
+        android:textSize="@dimen/text_view_temperature_text_size_30sp"
+        tools:text="32°"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpleDraweeViewWeather"
+        android:layout_width="@dimen/simple_drawee_view_weather_size_80dp"
+        android:layout_height="@dimen/simple_drawee_view_weather_size_80dp"
+        android:layout_marginEnd="@dimen/simple_drawee_view_margin_end_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

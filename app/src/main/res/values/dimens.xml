@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Common-->
+    <dimen name="common_button_margin_30dp">30dp</dimen>
+    <dimen name="common_button_margin_vertical_30dp">30dp</dimen>
+
+    <!--Weather list item-->
+    <dimen name="weather_list_item_height_150dp">150dp</dimen>
+    <dimen name="container_margin_top_10dp">10dp</dimen>
+    <dimen name="container_margin_start_10dp">10dp</dimen>
+    <dimen name="container_margin_end_10dp">10dp</dimen>
+    <dimen name="text_view_city_name_margin_20dp">20dp</dimen>
+    <dimen name="text_view_city_name_text_size_20sp">20sp</dimen>
+    <dimen name="text_view_temperature_margin_end_5dp">5dp</dimen>
+    <dimen name="text_view_temperature_text_size_30sp">30sp</dimen>
+    <dimen name="simple_drawee_view_weather_size_80dp">80dp</dimen>
+    <dimen name="simple_drawee_view_margin_end_12dp">12dp</dimen>
+
+    <!--Home Page-->
+    <dimen name="text_view_home_page_text_size_18sp">18sp</dimen>
+    <dimen name="text_view_address_text_size_18sp">18sp</dimen>
+    <dimen name="text_view_coordinates_text_size_18sp">18sp</dimen>
+    <dimen name="text_view_temperature_text_size_100sp">100sp</dimen>
+    <dimen name="simple_drawee_view_weather_type_size_150dp">150dp</dimen>
+    <dimen name="text_view_humidity_text_size_18sp">18sp</dimen>
+    <dimen name="text_view_wind_speed_text_size_18sp">18sp</dimen>
+    <dimen name="text_view_time_text_size_100sp">100sp</dimen>
+
+    <!--Cities Weather-->
+    <dimen name="swipe_refresh_layout_margin_bottom_50dp">50dp</dimen>
+
+    <!--Add Location-->
+    <dimen name="text_input_layout_margin_16dp">16dp</dimen>
+    <dimen name="map_view_margin_vertical_120dp">120dp</dimen>
+    <dimen name="map_view_margin_horizontal_10dp">10dp</dimen>
+
+</resources>
